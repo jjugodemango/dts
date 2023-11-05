@@ -1,0 +1,557 @@
+background: #c16767
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;500;700&display=swap');
+
+body {
+  background: white;
+  color: black;
+}
+
+h2 {
+   
+  padding-bottom: 10px;
+}
+
+/*MENU*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+footer {
+  background-color: #A5172A;
+  color: #fff;
+  height: 85;
+  width: 1367.85px;
+  padding: 5px;
+}
+footer h2{
+  margin: 20px;
+  display: block;
+  text-align: center;
+}
+
+.header {
+  background-color: #A5172A;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+}
+
+.header .nav-links {
+  list-style: none;
+}
+
+.header .nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.header .nav-links li:hover {
+  transform: scale(1.1);
+}
+
+.header .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.header .nav-links li a:hover {
+  color: #FFBC0E;
+}
+
+.header .btn button {
+  font-weight: 700;
+  padding: 9px 25px;
+  background: #eceff1;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3 ease 0s;
+}
+
+.header .btn button:hover {
+  background-color: #e2f1f8;
+  color: #ffbc0e;
+  transform: scale(1.1);
+}
+
+#c16767
+
+
+
+
+/*SECCIÓN CARRUSEL DE FOTOS / código sacado de https://codepen.io/jh3y/pen/xxjxqOL*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+ul {
+  display: flex;
+  width: calc(80% - 2rem);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+
+ul:is(:hover, :focus-within) img {
+  opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+  filter: grayscale(calc(1 - var(--active-lerp, 0)));
+}
+
+:root {
+  --lerp-0: 1;
+  --lerp-1: 0.5787037;
+  --lerp-2: 0.2962963;
+  --lerp-3: 0.125;
+  --lerp-4: 0.037037;
+  --lerp-5: 0.0046296;
+  --lerp-6: 0;
+}
+
+a {
+  outline-offset: 4px;
+}
+
+li {
+  flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+  transition: flex 0.2s ease;
+}
+
+li:is(:hover, :focus-within) {
+  --active-lerp: var(--lerp-0);
+  z-index: 7;
+}
+
+li:has(+ li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li {
+  --active-lerp: var(--lerp-1);
+  z-index: 6;
+}
+
+li:has(+ li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li {
+  --active-lerp: var(--lerp-2);
+  z-index: 5;
+}
+
+li:has(+ li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li {
+  --active-lerp: var(--lerp-3);
+  z-index: 4;
+}
+
+li:has(+ li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li {
+  --active-lerp: var(--lerp-4);
+  z-index: 3;
+}
+
+li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li+li {
+  --active-lerp: var(--lerp-5);
+  z-index: 2;
+}
+
+li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
+li:is(:hover, :focus-within)+li+li+li+li+li+li {
+  --active-lerp: var(--lerp-6);
+  z-index: 1;
+}
+
+
+/*CONFIGURACIÓN GENERAL DE LAS SECCIONES Y HOVER*/
+
+.detail {
+  flex: 1 0 0;
+  margin: 0 auto;
+  background-color: white;
+  width: 80%;
+  float: center;
+}
+
+.detail-section {
+  transition: all 0.3s;
+}
+
+.detail:hover .detail-section {
+  opacity: 0.3;
+}
+
+.detail .detail-section:hover {
+  opacity: 1;
+}
+
+}
+
+.detail-section:not(:last-of-type) {
+  padding-bottom: 1rem;
+}
+
+.detail-section>.detail-content {
+  padding: 1rem;
+  padding-left: 2rem;
+  user-select: none;
+}
+
+.detail-content p {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 17px;
+  padding-right: 4rem;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.detail-content li {
+  font-family: 'Hind Siliguri', sans-serif;
+  font-size: 17px;
+}
+
+.detail-content ul {
+  padding-left: 1.4rem;
+}
+
+.detail-title {
+  color: black;
+   
+  font-size: 20px;
+  margin-bottom: -20px;
+  padding-left: 5px;
+  margin-top: 40px;
+  margin-bottom: 20px
+}
+
+
+
+/* TITULO PRINCIPAL // código sacado de chat gpt */
+.titlea,
+.titleb {
+  display: inline-block;
+}
+
+.titlea {
+   
+  color: #A5172A;
+  font-size: 50px;
+  background: white;
+  margin: 50px 0px 40px;
+}
+
+.titleb {
+  font-family: 'DM Serif Display', serif;
+  color: white;
+  background: #A5172A;
+  font-size: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 50px 0px 40px 10px;
+}
+
+/*PERFIL E INFO EVAN ROTH */
+.evan-img {
+  float: left;
+  height: 315px;
+  width: 215px;
+  padding: 15px;
+  margin-bottom: 5px;
+}
+
+/* SECCIÓN INFO SOBRE EL PROYECTO /// vimos como hacer las cajas/columnas de colores en https://www.w3schools.com/css/tryit.asp?filename=trycss_float_boxes */
+
+.boxes p {
+  font-family: 'Hind Siliguri', sans-serif;
+  color: white;
+  margin: 18px 0px 18px 48px;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.boxes h2 {
+  color: white;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.box-1 {
+  float: left;
+  width: 45%;
+  padding: 15px;
+  background-color: #c16767;
+  margin: 7px;
+}
+
+.box-2 {
+  float: right;
+  width: 45%;
+  padding: 15px;
+  background-color: #DF97A1;
+  margin: 7px;
+}
+
+.box-4 {
+  float: left;
+  width: 45%;
+  padding: 15px;
+  background-color: #DF97A1;
+  margin: 7px;
+}
+
+.box-4 a {
+  font-family: 'Hind Siliguri', sans-serif;
+  display: block;
+  color: #A5172A;
+  font-size: 17px;
+  text-align: center;
+  margin-bottom: 18px; 
+  
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* *Todavía dentro de la sección sobre el proyecto* para hacer las imagenes con hover y texto sacamos el código de https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity */
+.container {
+  position: relative;
+  width: 45%;
+  float: right;
+  margin: 7px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: justify;
+  width: 80%;
+}
+
+.text-mas {
+  font-family: 'Hind Siliguri', sans-serif;
+  color: white;
+  font-size: 17px;
+  background-color: #c16767;
+  padding: 10px
+}
+
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.container: .image {
+  background-color: transparent !important;
+}
+
+.container:hover .image {
+  background-color: purple;
+  opacity: 0.4;
+}
+
+
+/* SOBRE EL PAPER */
+.column-texto {
+  float: right;
+  width: 35%;
+  background-color: #c16767;
+}
+
+.column-texto h2 {
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.column-texto p {
+  font-family: 'Hind Siliguri', sans-serif;
+  color: white;
+  text-align: left;
+  display: block;
+  margin-left: 48px;
+  padding-bottom: 18px;
+}
+
+/*ajustes imágenes con hover*/
+.container-otro {
+  position: relative;
+  width: 60%;
+  float: left;
+  margin-top: 18px;
+}
+
+.middle-otro {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: left;
+  width: 80%;
+  ;
+}
+
+.textt {
+  font-family: 'Hind Siliguri', sans-serif;
+  color: white;
+  padding: 15px;
+  font-size: 17px;
+  background-color: #c16767;
+  width: 100%;
+}
+
+.image-otro {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 230px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.container-otro:hover .middle-otro {
+  opacity: 1;
+}
+
+.container-otro: .image-otro {
+  background-color: transparent !important;
+}
+
+.container-otro:hover .image-otro {
+  background-color: purple;
+  opacity: 0.4;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  text-align: justify;
+  width: 80%;
+}
+
+/*ajustes foto larga con hover *todavía dentro de la sección paper*/
+.container-otro2 {
+  position: relative;
+  width: 100%;
+  float: center;
+  margin-top: 18px;
+}
+
+.image-otro2 {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: 300px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+
+.container-otro2:hover .middle {
+  opacity: 1;
+}
+
+.container-otro2: .image-otro2 {
+  background-color: transparent !important;
+}
+
+.container-otro2:hover .image-otro2 {
+  background-color: purple;
+  opacity: 0.4;
+}
+
+
+/* GALERÍA DE FOTOS PROYECTO (3fotos) */
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.column img {
+  object-fit: cover;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*SECCIÓN VINCULACIÓN CRITICA*/
+.social-img {
+  float: left;
+  width: 370px;
+  padding: 30px;
+}
+
+.tecno-img {
+  float: right;
+  width: 270px;
+  padding: 30px;
+}
+
+.diseño-img {
+  float: left;
+  width: 400px;
+  padding: 30px;
+}
+
+.ambiental-img{
+  float: right;
+  width: 270px;
+  padding: 30px;
+}
+.detail-der {
+  text-align: right;
+}
+
+/*SECCIÓN CONCLUSIONES*/
+.conclusiones{
+  padding-top: 30px;
+}
+
